@@ -4,9 +4,13 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div id="info">
-        <div id="edgeCounter">Checks made: 0</div>
-        <div id="status">Current status: Drawing</div>
+    <div id="Constraints">
+        <div><input type="checkbox" id="connectivityCheckbox"><label for="connectivityCheckbox">Connected?</label></div>
+        <div><input type="checkbox" id="edgeweightsCheckbox"><label for="edgeweightsCheckbox">Edge weights?</label></div>
+        <div><input type="checkbox" id="directionCheckbox"><label for="directionCheckbox">Directed?</label></div>
+        <div><input type="checkbox" id="multiedgeCheckbox"><label for="multiedgeCheckbox">Multiple edges?</label></div>
+        <div><input type="checkbox" id="loopCheckbox"><label for="loopCheckbox">Loops?</label></div>
+        <div><input type="checkbox" id="negativeedgeweightsCheckbox"><label for="negativeedgeweightsCheckbox">Negative edge weights?</label></div>
     </div>
     
     <div id="sidebar">
@@ -16,12 +20,9 @@
     <canvas id="drawingArea" width="500" height="500"></canvas>
 
     <div id="buttons">
-        <button id="clearButton">Clear Points</button>
-        <button id="visualizeON3">Visualize Convex Hull in O(n^3)</button>
-        <button id="visualizeONh">Visualize Convex Hull in O(nh)</button>
+        <button id="clearButton">Clear canvas</button>
+        <button id="downloadGraph">Download graph</button>
     </div>
-
-    <button id="infoButton">Info</button>
 
     <script src="script.js"></script>
 </body>

@@ -1,58 +1,82 @@
+/* General styles */
 body {
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     height: 100vh;
-    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
 }
 
-#drawingArea {
-    border: 1px solid #000;
-}
-
-#buttons {
+#Constraints {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-#buttons button {
-    display: block;
-    margin-top: 20px;
-    position: relative;
-}
-
-button.button-active::after {
-    content: "";
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border: 2px solid red;
+    top: 20px;
+    left: 20px;
 }
 
-#info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#Constraints div {
+    margin: 10px 0;
 }
 
-#infoButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+/* Checkbox styles */
+#Constraints input[type="checkbox"] {
+    margin-right: 10px;
 }
 
+/* Slider styles */
 #sidebar {
     position: absolute;
-    width: 200px;
-    height: 20px;
-    bottom: 10px;
-    border: 2px solid #000;
-    padding: 5px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .slider {
-    width: 100%;
+    width: 300px;
+}
+
+/* Canvas styles */
+#drawingArea {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #000;
+}
+
+/* Button styles */
+#buttons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#buttons button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    #sidebar .slider {
+        width: 200px;
+    }
+    
+    #buttons {
+        flex-direction: row;
+        bottom: 20px;
+        top: auto;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    #buttons button {
+        margin: 0 10px;
+    }
 }
